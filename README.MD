@@ -13,9 +13,7 @@ Queen Waweru
    - Open a terminal (or command prompt) on your computer and navigate to the folder where you want to store the project.
    - Clone the repository using Git:
      ```bash
-     git clone https://github.com/your-username/akan-name-generator.git
-     ```
-   - Replace `https://github.com/your-username/akan-name-generator.git` with the actual URL of the repository if necessary.
+     git clone https://malkia101.github.io/akhan_name/
 
 2. **Navigate to the Project Directory**
    - After cloning the repository, navigate into the project folder:
