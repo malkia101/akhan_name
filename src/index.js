@@ -11,7 +11,12 @@ function usersInput(){
 
     console.log(birthdate,gender)
 
-    if(!birthdate|| !gender)(
+    if(!birthdate || !gender){
         alert("Please fill out all details")
-    )
+        return
+    }
 }
+
+// array destructuring
+const [year,month,day] = birthdate.split("-").map(Number)
+console.log(year,month,day)
