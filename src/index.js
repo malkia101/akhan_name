@@ -4,3 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
          usersInput()
      })
 })
+
+function usersInput(){
+    const birthdate = document.getElementsById("birthdate").value;
+    const gender = document.getElementById("select").value;
+}
