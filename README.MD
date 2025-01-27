@@ -18,7 +18,7 @@ Queen Waweru
 2. **Navigate to the Project Directory**
    - After cloning the repository, navigate into the project folder:
      ```bash
-     cd akan-name-generator
+     cd akhan_name
      
 3. **Open the HTML File**
    - Locate the `index.html` file in the project directory.
