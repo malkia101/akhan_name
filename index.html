@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akhan Name Generator</title>
+    <title>Akan Name Generator</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
     <header>
         <h1>Akan Name Generator</h1>
-        <p>This app will calculate the day of the week you were born and give you your Akan name based on your gender.</p>
+        <p>This app will calculate the day of the week you were born and give you your Akan name based on your gender.
+        </p>
     </header>
-    
+
     <main>
-        <form>
+        <form id="akan-form">
             <div id="akan-form">
                 <label for="birthdate">Birthdate</label>
                 <input type="date" id="birthdate" required>
-    
+
                 <label for="gender">Select Gender</label>
                 <select id="gender" name="gender" required>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                 </select>
-    
+
                 <button type="submit">Submit</button>
             </div>
         </form>
-    
+
         <div id="result"></div>
     </main>
-    
+
     <script src="/src/index.js"></script>
 </body>
+
 </html>
