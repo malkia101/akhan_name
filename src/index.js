@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function usersInput() {
-    const birthdate = document.getElementById("birthdate").value; 
+    const birthdate = document.getElementById("birthdate").value;
     const gender = document.getElementById("gender").value;
 
     console.log(birthdate, gender);
@@ -36,11 +36,17 @@ function usersInput() {
 function determineAkanName(year, month, day, gender) {
     console.log("From the determine Akan name function", year, month, day, gender);
 
+    // Adjust for January and February months in the formula (they count as months 13 and 14 of the previous year)
+    if (month <= 2) {
+        month += 12;  // Add 12 to January and February to make them 13th and 14th month of the previous year
+        year -= 1;    // Subtract 1 from the year
+    }
+
     //  Extract century (CC) and year (YY)
     const CC = Math.floor(year / 100); // Century (first two digits of year)
     const YY = year % 100; // Year (last two digits)
 
-    // formula to calculate the day of the week
+    // Apply the formula to calculate the day of the week
     const d = Math.floor(
         ((CC / 4) - 2 * CC - 1 + (5 * YY / 4) + Math.floor((26 * (month + 1)) / 10) + day) % 7
     );
@@ -69,6 +75,7 @@ function determineAkanName(year, month, day, gender) {
         ]
     };
 
+    // Determine the Akan name based on gender and day of the week
     let akanName = "";
     if (gender === "male") {
         akanName = akanNames.male[d];
